@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  /*background: linear-gradient(135deg, #c3a3f1, #6414e9);*/
+  /*background: rgb(174,45,250);
+  background: linear-gradient(300deg, rgba(174,45,250,1) 0%, rgba(38,252,251,1) 45%, rgba(0,212,255,1) 65%, rgba(174,45,250,1) 100%);*/
+  background: rgb(174,45,250);
+  /*background: linear-gradient(300deg, rgba(174,45,250,1) 0%, rgba(38,252,251,1) 45%, rgba(0,212,255,1) 65%, rgba(174,45,250,1) 100%);*/
+  
+  animation: ghaith 1.5s infinite alternate-reverse;
+  display: flex;  
+
+}
+@keyframes ghaith{
+  0%{
+    background: rgb(174,45,250);
+    background: linear-gradient(300deg, rgba(174,45,250,1) 0%, rgba(38,252,251,1) 45%, rgba(0,212,255,1) 65%, rgba(174,45,250,1) 100%);
+  }
+  50%{
+    background: rgb(174,45,250);
+    background: linear-gradient(-90deg, rgba(174,45,250,1) 0%, rgba(38,252,251,1) 45%, rgba(0,212,255,1) 65%, rgba(174,45,250,1) 100%);
+  }
+  100%{
+    background: rgb(174,45,250);
+    background: linear-gradient(-135deg, rgba(174,45,250,1) 0%, rgba(38,252,251,1) 45%, rgba(0,212,255,1) 65%, rgba(174,45,250,1) 100%);
+  }
+}
+.wrapper {
+  width: 90%;
+  max-width: 34.37em;
+  max-height: 90vh;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: 0em 2em 7em rgb(177, 123, 252);
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wheel {
+  max-height: inherit;
+  width: inherit;
+  top: 0;
+  padding: 0;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spin-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 26%;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+  color: #c66e16;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+img {
+  position: absolute;
+  transform: translateX(-30%);
+  width: 4em;
+  top: -6%;
+  right: 17%;
+}
+#final-value {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1.5em;
+  color: #202020;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    font-size: 12px;
+  }
+  img {
+    right: -5%;
+  }
+}
